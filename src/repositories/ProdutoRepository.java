@@ -1,6 +1,7 @@
-package exemplo;
+package repositories;
 import java.util.Map;
 import java.util.HashMap;
+import models.Produto;
 
 public class ProdutoRepository {
   
@@ -27,6 +28,10 @@ public class ProdutoRepository {
 
   public Produto getProduto(String id) {
     return catalogo.get(id);
+  }
+  
+  public Map<String,Produto> getCatalogo() {
+	  return this.catalogo;
   }
 
   public String listaProdutos() {

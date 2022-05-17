@@ -1,6 +1,7 @@
-package exemplo;
+package repositories;
 import java.util.Map;
 import java.util.HashMap;
+import models.Lote;
 
 public class LoteRepository {
   
@@ -27,6 +28,10 @@ public class LoteRepository {
 
   public Lote getLote(String id) {
     return estoque.get(id);
+  }
+  
+  public Map<String,Lote> getEstoque() {
+	  return this.estoque;
   }
 
   public String listaLotes() {
